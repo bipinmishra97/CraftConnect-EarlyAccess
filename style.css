@@ -829,6 +829,7 @@ body.scrolled .header {
     width: 100%;
     align-items: center;
     gap: 12px;
+    position: relative;
 }
 
 @media screen and (max-width: 767px) {
