@@ -837,6 +837,26 @@ body.scrolled .header {
     }
 }
 
+.newsletter .newsletter-form form .msg {
+     position: absolute;
+     top: calc(100% + 5px);
+     left: 4px;
+     color: var(--clr-white);
+ }
+
+@media screen and (max-width: 991px) {
+    .newsletter .newsletter-form form .msg {
+        font-size: 14px;
+        top: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .newsletter .newsletter-form form .msg {
+        position: static;
+    }
+}
+
 .newsletter .newsletter-form-inner {
     display: flex;
     align-items: center;
