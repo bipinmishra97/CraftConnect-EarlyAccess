@@ -68,16 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         // Use application/x-www-form-urlencoded body (Apps Script handles both)
-        const token = grecaptcha.getResponse();
-        if (!token) {
-          msg.textContent = 'Please complete the reCAPTCHA.';
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Notify Me';
-          return;
-        }
-
-        const body = new URLSearchParams({ email, token }).toString();
-
+        const body = new URLSearchParams({ email }).toString();
         const res = await fetch(SCRIPT_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

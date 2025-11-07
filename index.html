@@ -60,8 +60,6 @@
 
     <title>CraftConnect | The Future of Skilled Trades Hiring</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <!-- START : Header section -->
@@ -145,14 +143,14 @@
                 name="email"
                 placeholder="Enter your email"
                 required
+                aria-required="true"
+                inputmode="email"
+                autocomplete="email"
               />
-
-              <!-- Insert CAPTCHA -->
-              <div class="g-recaptcha" data-sitekey="6Lc4JAUsAAAAANeBzT8j1c8G-tCd4tddrnco37lv"></div>
-
               <button
                 type="submit"
                 class="text-semibold"
+                aria-label="Submit your email to get notified"
               >
                 Notify Me
               </button>
@@ -309,14 +307,14 @@
                     name="email"
                     placeholder="Enter your email"
                     required
+                    aria-required="true"
+                    inputmode="email"
+                    autocomplete="email"
                   />
                 </div>
-
-                <!-- Insert CAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="6Lc4JAUsAAAAANeBzT8j1c8G-tCd4tddrnco37lv"></div>
-
                 <button
                   type="submit"
+                  aria-label="Submit your email to get notified"
                 >
                   Notify Me
                 </button>
