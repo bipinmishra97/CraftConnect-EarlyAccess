@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const SCRIPT_URL =
-    'https://script.google.com/macros/s/AKfycbz_D6kvlFOriJRHkYf-N1DBLnwuJM3YG_hNKP81JEBvSrSfbwmTXgrRXQf2ehK_LcxB/exec';
+    'https://script.google.com/macros/s/AKfycbxTsN8u6DwsDHpi41m0AOJ59bjzfPHScwxfNtmupZA708ajI-JVmERwtfSpE_MCNAp3/exec';
 
   // Simple email regex (client-side only)
   function isEmail(e) {
@@ -75,7 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         // Use application/x-www-form-urlencoded body (Apps Script handles both)
-        const body = new URLSearchParams({ email }).toString();
+        // Get reCAPTCHA token before sending
+        const token = await grecaptcha.execute(
+          '6LcD7wcsAAAAAP1DjhC-XbsVRGIPEz1uA9nA9RUH',
+          {
+            action: 'newsletter',
+          }
+        );
+
+        const body = new URLSearchParams({
+          email,
+          token, // send token to server
+        }).toString();
+
         const res = await fetch(SCRIPT_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
