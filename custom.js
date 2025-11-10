@@ -127,6 +127,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Clear message while typing
+  document.addEventListener('input', (evt) => {
+    const input = evt.target;
+    if (input.type === 'email') {
+      const form = input.closest('form');
+      const msg = form.querySelector('.msg');
+      if (msg) msg.textContent = '';
+    }
+  });
+
   // Popup logic
   function showSuccessPopup() {
     const popup = document.getElementById('successPopup');
