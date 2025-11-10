@@ -478,23 +478,42 @@
     <!-- END : Footer section -->
 
     <!-- Success Popup -->
-    <div class="popup-overlay" id="successPopup" hidden>
+    <div
+      class="popup-overlay"
+      id="successPopup"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popupTitle"
+      aria-describedby="popupMessage"
+      tabindex="-1"
+    >
       <div class="popup-box text-center">
-        <button class="popup-close" id="popupClose" aria-label="Close popup">
+        <button
+          class="popup-close"
+          id="popupCloseBtn"
+          aria-label="Close popup"
+          type="button"
+        >
           ×
         </button>
+
         <img
           src="img/svg/craft-connect-popup-logo.svg"
-          alt="CraftConnect Logo"
+          alt="CraftConnect company logo"
           width="151"
           height="32"
         />
-        <h3 class="text-20 mb-10">You’re on the list! 🎉</h3>
-        <p class="text-12 text-medium">
+
+        <h3 class="text-20 mb-10" id="popupTitle">You’re on the list! 🎉</h3>
+
+        <p class="text-12 text-medium" id="popupMessage">
           You’ll be notified as soon as updates are available.
         </p>
 
-        <button type="button" class="popup-btn" id="popupClose">Okay</button>
+        <button type="button" class="popup-btn" id="popupConfirmBtn">
+          Okay
+        </button>
       </div>
     </div>
 
