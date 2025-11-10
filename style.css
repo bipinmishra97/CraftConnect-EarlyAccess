@@ -84,6 +84,7 @@
   --clr-text-light: #b8c2cd;
   --clr-bg-gray: #f6f7f9;
   --clr-text-gray: var(--clr-text-gray);
+  --clr-text-red: #d71f1f;
 }
 
 /* Universal Box-Sizing */
@@ -155,6 +156,17 @@ a {
 
 body {
   font-family: 'Manrope', sans-serif;
+}
+
+.msg.error-msg {
+  color: var(--clr-text-red);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .msg.error-msg {
+    font-size: 14px;
+  }
 }
 
 .container {
@@ -899,7 +911,6 @@ body.scrolled .header {
   position: absolute;
   top: calc(100% + 5px);
   left: 4px;
-  color: var(--clr-white);
 }
 
 @media screen and (max-width: 991px) {
