@@ -32,8 +32,11 @@
       property="og:description"
       content="Built by craftsmen, for craftsmen. Connect directly with real opportunities in the skilled trades industry. Join the platform that bridges recruiters, craftsmen, and employers."
     />
-    <meta property="og:image" content="/*add site_URL here*/img/og-image.png" />
-    <meta property="og:url" content="/*add site_URL here*/" />
+    <meta
+      property="og:image"
+      content="https://www.craftconnectjobs.com/img/webp/og-image.png"
+    />
+    <meta property="og:url" content="https://www.craftconnectjobs.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="CraftConnect" />
 
@@ -49,7 +52,7 @@
     />
     <meta
       name="twitter:image"
-      content="/*add site_URL here*/img/og-image.png"
+      content="https://www.craftconnectjobs.com/img/webp/og-image.png"
     />
 
     <!-- Additional Recommended Tags -->
@@ -110,9 +113,10 @@
               <span class="text-clr-primary">Skilled Trades Hiring</span>.
             </h1>
 
-            <p class="text-18 hero-subtitle">
-              Craft Connect bridges the gap between recruiters, craftsmen, and
-              employers — all in one smart platform.
+            <p class="text-22 hero-subtitle">
+              craft connect bridges the gap between recruiters, craftsmen, and
+              employers.
+              <span>— all in one smart platform —</span>
             </p>
           </div>
 
@@ -127,7 +131,10 @@
         </div>
 
         <div class="hero-form">
-          <form aria-label="Email notification signup form" id="hero-email-form">
+          <form
+            aria-label="Email notification signup form"
+            id="hero-email-form"
+          >
             <div class="hero-form-inner">
               <img
                 src="img/svg/mail.svg"
@@ -159,13 +166,14 @@
           </form>
         </div>
 
-        <p class="hero-line text-14 text-medium">
+        <p class="hero-line text-20 text-medium">
           Be the first to know when we go live.
         </p>
       </section>
       <!-- END : Hero section -->
 
       <!-- START : About section -->
+
       <section
         class="about pb-100"
         role="region"
@@ -289,7 +297,10 @@
             </div>
 
             <div class="newsletter-form">
-              <form aria-label="Newsletter signup form" id="newsletter-email-form">
+              <form
+                aria-label="Newsletter signup form"
+                id="newsletter-email-form"
+              >
                 <div class="newsletter-form-inner">
                   <img
                     src="img/svg/mail.svg"
@@ -349,7 +360,7 @@
               share, and advance your career.
             </p>
 
-            <nav class="footer-nav" aria-label="Footer Navigation">
+            <!-- <nav class="footer-nav" aria-label="Footer Navigation">
               <ul class="footer-nav-list">
                 <li>
                   <a
@@ -420,22 +431,28 @@
                   </a>
                 </li>
               </ul>
-            </nav>
+            </nav> -->
           </div>
 
           <!-- Footer Item 2 -->
-          <div class="footer-item">
-            <h4 class="text-20 text-bold footer-title">Contact</h4>
+          <div class="footer-item text-right">
+            <h4 class="text-20 text-bold footer-title mb-20">Follow Us on</h4>
 
-            <a href="mailto:support@craftconnectjobs.com" class="footer-link">
+            <a
+              href="https://www.linkedin.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our LinkedIn page"
+              class="footer-btn"
+            >
               <img
-                src="img/svg/mail.svg"
+                src="img/svg/linkedin-white.svg"
                 alt=""
-                width="20"
-                height="20"
+                width="16"
+                height="16"
                 aria-hidden="true"
               />
-              <p class="text-14 text-medium">support@craftconnectjobs.com</p>
+              <p class="text-14 text-medium">LinkedIn</p>
             </a>
           </div>
         </div>
@@ -450,9 +467,36 @@
           loading="lazy"
           decoding="async"
         />
+
+        <p class="text-14 text-medium footer-bottom-link">
+          <a href="mailto:support@craftconnectjobs.com">
+            support@craftconnectjobs.com
+          </a>
+        </p>
       </div>
     </footer>
     <!-- END : Footer section -->
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="successPopup" hidden>
+      <div class="popup-box text-center">
+        <button class="popup-close" id="popupClose" aria-label="Close popup">
+          ×
+        </button>
+        <img
+          src="img/svg/craft-connect-popup-logo.svg"
+          alt="CraftConnect Logo"
+          width="151"
+          height="32"
+        />
+        <h3 class="text-20 mb-10">You’re on the list! 🎉</h3>
+        <p class="text-12 text-medium">
+          You’ll be notified as soon as updates are available.
+        </p>
+
+        <button type="button" class="popup-btn" id="popupClose">Okay</button>
+      </div>
+    </div>
 
     <script src="custom.js"></script>
   </body>
